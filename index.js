@@ -30,7 +30,10 @@ var dateOptions = [
 ]
 
 var json = {
-    "title": "Cox COVID-19 Related Access Test Form",
+    "title": {
+			"default": "Cox COVID-19 Related Access Test Form",
+			"es": "Cox COVID-19 Spanish Test Form"
+		},
 		"elements": [
 				{
 						"type": "panel",
@@ -39,41 +42,65 @@ var json = {
 								{
 										"type": "text",
 										"name": "first_name_textbox",
-										"title": "First Name",
+										"title": {
+											"default": "First Name",
+											"es": "Nombre de pila"
+										},
 										"inputType": "text",
 										"isRequired": "true"
 								}, {
 										"type": "text",
 										"name": "last_name_textbox",
-										"title": "Last Name",
+										"title": {
+											"default": "Last Name",
+											"es": "Apellido"
+										},
 										"inputType": "text",
 										"isRequired": "true"
 								}, {
 										"type": "radiogroup",
 										"name": "how_to_contact_radiogroup",
-										"title": "How would you like to be contacted, if needed?",
+										"title": {
+											"default": "How would you like to be contacted, if needed?",
+											"es": "¿Cómo le gustaría ser contactado, si es necesario?"
+										},
 										"choices": [
 												{
 														"value": "mobilePhone",
-														"text": "Mobile Phone"
+														"text": {
+															"default": "Mobile Phone",
+															"es": "Teléfono móvil"
+														}
 												}, {
 														"value": "email",
-														"text": "Email"
+														"text": {
+															"default": "Email",
+															"es": "Correo electrónico"
+														}
 												}
 										],
 										"isRequired": "true"
 								}, {
 										"type": "text",
 										"name": "mobile_phone_textbox",
-										"title": "Mobile Phone Number",
-										"description": "Note: By selecting Mobile Phone, I verify that this is my mobile phone number and I consent to receive autodialed and pre-recorded/artificial calls, including text messages, from Cox concerning health and safety messages that, among other things, help confim my authorization to access Cox facilities.  Message and data rates apply.",
+										"title": {
+											"default": "Mobile Phone Number",
+											"es": "Número de teléfono móvil",
+										},
+										"description": {
+											"default": "Note: By selecting Mobile Phone, I verify that this is my mobile phone number and I consent to receive autodialed and pre-recorded/artificial calls, including text messages, from Cox concerning health and safety messages that, among other things, help confim my authorization to access Cox facilities.  Message and data rates apply.",
+											"es": "Nota: Al seleccionar Teléfono móvil, verifico que este es mi número de teléfono móvil y doy mi consentimiento para recibir llamadas automáticas y pregrabadas / artificiales, incluidos mensajes de texto, de Cox con respecto a mensajes de salud y seguridad que, entre otras cosas, ayudan a confirmar mi autorización para acceder a las instalaciones de Cox. Se aplican tarifas de mensajes y datos."
+										},
 										"inputType": "text",
 										"isRequired": "true",
 										"visibleIf": "{how_to_contact_radiogroup} = 'mobilePhone'",
 								},{
 										"type": "text",
 										"name": "email_textbox",
-										"title": "Email",
+										"title": {
+											"default": "Email",
+											"es": "Correo electrónico"
+										},
 										"description": "Note: An email confirmation will be sent ot this email upon completion of this form.",
 										"inputType": "email",
 										"isRequired": "true",
@@ -262,6 +289,10 @@ survey.onTextMarkdown.add(function(survey, options){
     //set html
     options.html = str;
 });
+
+// survey.locale = navigator.language || navigator.language[0];
+survey.locale = "es";
+console.log(survey.locale);
 
 // $("#surveyElement").Survey({model: survey});
 survey.render("surveyElement");
