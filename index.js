@@ -29,6 +29,56 @@ var dateOptions = [
     "11:00 PM"
 ]
 
+var locationOptions = [
+	{ "value": "1850 W. Deer Valley Rd. Phoenix, AZ 85027", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1101 E Bell Rd Phoenix, AZ 85022", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "296 West 5th Street Benson, AZ 85635", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "21805 W Yuma Rd Buckeye, AZ 85326", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "100 N 79th St Chandler, AZ 85224", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1395 E Colorado Loop Casa Grande, AZ 85122", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1119 F Avenue Douglas, AZ 85607", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "6610 W Van Buren Phoenix, AZ 85043", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1714 West Commerce Pointe Place, Green Valley, AZ 85614", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1626 N 24th St Phoenix, AZ 85008", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "4437 E Holmes Mesa, AZ 85204", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "28213 N 64th St Cave Creek, AZ 85331", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "9534 W Peoria Ave Peoria, AZ 85345", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "6461 N Mitchell Trail Florence, AZ 85132", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "9009 E Via Linda Scottsdale, AZ 85258", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "1026 North Ave Sierra Vista, AZ 85635", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "4777 East 29th Street Tucson, AZ 85711", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "9300 S. Rita Rd. Tucson, AZ 85747", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "27890 El Mirage Rd Peoria, AZ 85383", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "200 Flying E Ranch rd., Wickenburg, AZ 85390", "visibleIf": "{state_dropdown} = 'AZ'"},
+	{ "value": "838 Tavern Road Alpine, CA 91901", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "406 Third Ave Chula Vista, CA 91910", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "220 Elm Street San Diego, CA 92101", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "1175 North Cuyamaca Street El Cajon, CA 92020", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "1942  East Valley Parkway, Escondido, CA 92027", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "1441 Euclid Avenue  San Diego, CA 92105", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "623 Garrison Street Oceanside, CA 92054", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "14016 Midland Ave Poway, CA 92064", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "1155 Park Center Drive Vista, CA 92083", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "9750 Goethe Rd Sacramento, CA 95827", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "9764 Handy Creek Road Orange, CA 92869", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "17 Journey St. Aliso Viejo, CA 92656", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "26125 Victoria Blvd Capistrano Beach, CA 92624", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "17521 Gillette Irvine, CA 92614", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "29947 Avenida De Las Banderas Rancho Santa Margarita, CA 92688", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "33 Peninsula Center Rolling Hills Estates CA 90274", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "22 S. Fairview Ave Goleta CA 93117", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "27 E Cota St Santa Barbara CA 93101", "visibleIf": "{state_dropdown} = 'CA'"},
+	{ "value": "2770 West Ann Road Las Vegas, NV 89031", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "9235 Montessouri St. Las Vegas, NV 89178", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "1000 Industrial Road Boulder City NV 89005", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "2451 Ernest May Lane   Las Vegas, NV 89106", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "2453 Ernest May Lane Las Vegas, NV 89106", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "180 Pacific Center Drive Henderson NV 89074", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "8697 Oso Blanca Road Las Vegas, NV 89166", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "3850 N. Tenaya Way Las Vegas NV 89129", "visibleIf": "{state_dropdown} = 'NV'"},
+	{ "value": "7315 Vegas Valley Las Vegas NV. 89142", "visibleIf": "{state_dropdown} = 'NV'"}
+]
+
 var json = {
     "title": {
 			"default": "Cox COVID-19 Related Access Test Form",
@@ -129,12 +179,7 @@ var json = {
 										"type": "dropdown",
 										"name": "location_dropdown",
 										"title": "{state_dropdown} Location",
-										"choices": [
-												{
-														"value": "place",
-														"text": "aPlace"
-												}
-										],
+										"choices": locationOptions,
 										"isRequired": "true",
 										"visibleIf": "{state_dropdown} notempty"
 								}, {
@@ -291,7 +336,7 @@ survey.onTextMarkdown.add(function(survey, options){
 });
 
 // survey.locale = navigator.language || navigator.language[0];
-survey.locale = "es";
+// survey.locale = "es";
 console.log(survey.locale);
 
 // $("#surveyElement").Survey({model: survey});
