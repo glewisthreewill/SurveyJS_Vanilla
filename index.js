@@ -1,6 +1,21 @@
+
+
 Survey
     .StylesManager
-    .applyTheme("modern");
+		.applyTheme("modern");
+		
+var myCss = {
+	root: "cei-survey-root",
+	container: "cei-survey-container",
+	header: "cei-survey-header",
+	headerText: "cei-survey-header-text",
+	title: "cei-survey-title",
+	description: "cei-survey-description",
+	body: "cei-survey-body",
+	question: {
+		cssContent: "cei-survey-question"
+	}
+}
 
 var dateOptions = [
     "12:00 AM",
@@ -340,7 +355,9 @@ survey.onTextMarkdown.add(function(survey, options){
 
 // survey.locale = navigator.language || navigator.language[0];
 // survey.locale = "es";
-console.log(survey.locale);
+// console.log(survey.locale);
+
+survey.css = myCss;
 
 // $("#surveyElement").Survey({model: survey});
 survey.render("surveyElement");

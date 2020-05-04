@@ -1,0 +1,59 @@
+body {
+	background-color: #e7edf3;
+}
+
+.cei-survey-root {
+	padding-top: 50px;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding-left: calc(50% - 425px);
+}
+
+.cei-survey-container {
+	color: #4e4e4e;
+	box-shadow: 0 0 11px rgba(0,0,0,.12);
+}
+
+.cei-survey-header {
+	color: #ffffff;
+	background-color: #084d89;
+	padding: 50px;
+}
+
+.cei-survey-title {
+	font-size: 38px;
+}
+
+.cei-survey-description {
+	margin-top: 25px;
+	font-size: 15px;
+}
+
+.cei-survey-description a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.cei-survey-container fieldset {
+	border: none;
+}
+
+.cei-survey-body {
+	padding: 20px 30px 50px;
+	background-color: #ffffff;
+}
+
+.sv-question__required-text {
+	color: #fb1422;
+}
+
+.sv-footer__complete-btn {
+	float: none;
+	border-radius: 0;
+	background-color: #084d89;
+}
+
+.sv-footer__complete-btn:hover {
+	background-color: #0d3567;
+}
