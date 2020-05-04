@@ -84,6 +84,9 @@ var json = {
 			"default": "Cox COVID-19 Related Access Test Form",
 			"es": "Cox COVID-19 Spanish Test Form"
 		},
+		"description": {
+			"default": "At Cox, the safety of our employees, customers and community is our top priority. In response to the COVID-19 pandemic, we're taking additional steps to keep you safe and our businesses running smoothly. As part of this effort, we are instituting a new protocol for our facilities.<br/><br/>First, all employees, contractors and vendors should work remotely when possible and limit site visits to tasks that require physical access to the site.<br/><br/>Please complete the below information in order to gain access to a site.<br/><br/>Thank you for your cooperation and support. For questions or more information, please reach out to <Enterprise.Security@coxinc.com>."
+		},
 		"elements": [
 				{
 						"type": "panel",
